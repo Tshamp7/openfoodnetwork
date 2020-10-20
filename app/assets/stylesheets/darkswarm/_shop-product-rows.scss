@@ -33,9 +33,11 @@
         }
 
         .variant-name,
-        .variant-price,
         .total-price {
-          line-height: 2.5em;
+          padding-top: .74em;
+        }
+        .variant-price {
+          padding-top: .65em;
         }
 
         // Variant name
@@ -48,10 +50,10 @@
           }
 
           & > *:nth-child(n + 2) {
-            color: #888;
+            color: $grey-550;
             font-size: 0.875rem;
+            font-style: italic;
             line-height: normal;
-            margin-top: -0.75em;
           }
         }
 
@@ -105,6 +107,7 @@
           }
 
           .product-producer {
+            color: $grey-550;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -160,6 +163,12 @@
                 &:hover, &:focus {
                   border-color: #ccc;
                 }
+              }
+
+              // Foundation doesn't show the nub on mobile.
+              // Repeating the style to show it here.
+              .nub {
+                border-color: transparent transparent #333333 transparent;
               }
             }
           }
